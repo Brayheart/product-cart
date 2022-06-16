@@ -1,21 +1,57 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import { getStorageCart, getCartItemIndex, getCartCount, setStorageCart } from '../../utils/localStorage';
 import './productCardStyles.scss';
-
 
 const ProductCard = (props) => {
     const {item} = props
 
-    const [cartCount, setCartCount] = useState(0)
+    const [cartCount, setCartCount] = useState(getCartCount(item))
 
-    const addToCart = () => {
-        setCartCount(cartCount+1)
+    const addToCart = (item) => {
+        const cartData = getStorageCart()
+        
+        const cartItemIndex = getCartItemIndex(cartData, item)
+
+        if (cartItemIndex !== -1) {
+            cartData.cart[cartItemIndex].quantity += 1
+        } else {
+            cartData.cart.push(item);
+        }
+
+        setCartCount(cartCount + 1)
+        cartData.total += item.price
+
+        setStorageCart(cartData)
+
     }
 
-    const removeFromCart = () => {
-        if (cartCount === 0) {
-            return;
-        }
-        setCartCount(cartCount-1)
+    const removeFromCart = (item) => {
+        const cartData = getStorageCart()
+        
+        const cartItemIndex = getCartItemIndex(cartData, item)
+
+        if (cartItemIndex !== -1) {
+            let cartQuanity = cartData.cart[cartItemIndex].quantity
+
+            if (cartQuanity > 0) {
+                cartData.cart[cartItemIndex].quantity -= 1
+                cartData.total -= item.price;
+                setCartCount(cartCount - 1);
+
+                if (cartData.cart[cartItemIndex].quantity === 0) {
+                    cartData.cart.splice(cartItemIndex, 1)
+                }
+
+                if (cartData.cart.length === 0) {
+                    cartData.total = 0;
+                }
+
+            }
+            
+        } 
+
+        setStorageCart(cartData)
+
     }
 
     return (
@@ -37,11 +73,11 @@ const ProductCard = (props) => {
                         ${Number(item.price).toFixed(2)}
                     </div>
                     <div className="product-card-details-cart-count">
-                        Cart Count: {cartCount}
+                        Cart Count: {getCartCount(item)}
                     </div>
                     <div className="product-card-details-btns">
-                        <button className="product-card-detail-btn btn-add" onClick={()=>addToCart()}>Add</button>
-                        <button className="product-card-detail-btn btn-remove" onClick={()=>removeFromCart()}>Remove</button>
+                        <button className="product-card-detail-btn btn-add" onClick={()=>addToCart(item)}>Add</button>
+                        <button className="product-card-detail-btn btn-remove" onClick={()=>removeFromCart(item)}>Remove</button>
                     </div>
                 </div>
             </div>
