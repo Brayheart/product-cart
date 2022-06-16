@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+import './index.css';
 
 const Header = () => {
     return <h1>Hello Rugs USA!</h1>
