@@ -1,0 +1,23 @@
+$navbar-title-fontSize: 24px;
+$navbar-cart-fontSize: 18px;
+
+.navbar-container {
+    display: flex;
+    padding: 0 16px;
+    height: 79px;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.navbar-links {
+    flex: 1;
+    .navbar-title {
+        font-size: $navbar-title-fontSize;
+        font-weight: bold;
+    }
+}
+
+.navbar-cart {
+    font-size: $navbar-cart-fontSize;
+    font-weight: bold;
+}
