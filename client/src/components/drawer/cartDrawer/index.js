@@ -16,7 +16,7 @@ const CartItemCard = (prop) => {
                 <div className="cart-li-product-details">
                     <div>
                         <div className="cart-li-product-name">
-                            {item.name}
+                            {item.productName}
                         </div>
                         <div className="cart-li-product-collection">
                             {item.collection} Collection
@@ -52,7 +52,7 @@ const CartDrawer = (props) => {
                             cart.length > 0 ?
                                 <React.Fragment>
                                     <ul className='cart-drawer-ul'>
-                                        {cart.map(item => <CartItemCard key={item.name} item={item} />)}
+                                        {cart.map(item => <CartItemCard key={item.productName} item={item} />)}
                                     </ul>
                                     <div className="cart-drawer-product-total">
                                         total: ${total.toFixed(2)}
