@@ -1,0 +1,50 @@
+.drawer-container {
+    position: absolute;
+    top: 0;
+    right: -300px;
+    height: 100%;
+    background-color: #FFF;
+    min-width: 0px;
+    border-left: 1px solid #CCC;
+    height: 100vh;
+    transition: min-width 300ms, right 350ms ease-in;
+    padding: 0 12px;
+    .drawer-inner {
+        .drawer-header {
+            display:flex;
+            .drawer-title {
+                flex: 1;
+                font-size: 24px;
+            }
+    
+            .drawer-close {
+                display: flex;
+                align-items: center;
+                font-size: 24px;
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
+
+.drawer-open {
+    min-width: 300px;
+    right: 0px;
+}
+
+.drawer-close {
+    min-width: 0px;
+}
+
+.drawer-display {
+    display: block;
+}
+
+.drawer-hidden {
+    display: none;
+}
+
+.drawer-span {
+    cursor: pointer;
+}
