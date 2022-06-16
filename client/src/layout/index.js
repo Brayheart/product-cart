@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from './navbar';
+import ProductGrid from '../component/productGrid';
 import './layoutStyles.scss';
 
 const Layout = () => {
@@ -8,7 +9,9 @@ const Layout = () => {
             <NavBar />
             <div className="layoutContainer">
                 <div className="layoutBody">
-                    Product Grid here
+                    <div className='layoutInner'>
+                        <ProductGrid />
+                    </div>
                 </div>
             </div>
         </React.Fragment>

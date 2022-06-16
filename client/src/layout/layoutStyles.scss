@@ -1,10 +1,16 @@
 $layout-max-width: 1400px;
 
 .layoutContainer {
+    height: 100%;
     width: 100%;
 }
 
 .layoutBody {
     max-width: $layout-max-width;
     margin: auto auto;
+    padding: 18px;
+}
+
+.layoutInner {
+    margin-top: 5rem;
 }
