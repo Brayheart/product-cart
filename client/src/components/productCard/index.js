@@ -1,13 +1,10 @@
 import React, {useState} from 'react';
 import './productCardStyles.scss';
 
-const item =   {
-    name: "Custom Rug",
-    collection: 'Custom',
-    price: 60.1,
-  }
 
 const ProductCard = (props) => {
+    const {item} = props
+
     const [cartCount, setCartCount] = useState(0)
 
     const addToCart = () => {
