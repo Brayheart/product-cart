@@ -71,7 +71,7 @@ const ProductCard = (props) => {
                 </div>
                 <div className="product-card-details">
                     <div className="product-card-details-name">
-                        {item.name}
+                        {item.productName}
                     </div>
                     <div className="product-card-details-collection">
                         {item.collection} Collection
