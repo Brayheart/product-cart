@@ -1,0 +1,10 @@
+$layout-max-width: 1400px;
+
+.layoutContainer {
+    width: 100%;
+}
+
+.layoutBody {
+    max-width: $layout-max-width;
+    margin: auto auto;
+}
