@@ -9,7 +9,9 @@ const Layout = () => {
             <NavBar />
             <div className="layoutContainer">
                 <div className="layoutBody">
-                    <ProductGrid />
+                    <div className='layoutInner'>
+                        <ProductGrid />
+                    </div>
                 </div>
             </div>
         </React.Fragment>
