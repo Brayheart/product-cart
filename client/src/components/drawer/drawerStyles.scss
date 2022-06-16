@@ -8,10 +8,13 @@
     border-left: 1px solid #CCC;
     height: 100vh;
     transition: min-width 300ms, right 350ms ease-in;
-    padding: 0 12px;
     .drawer-inner {
+        height: 100%;
+        
         .drawer-header {
             display:flex;
+            padding: 0 12px;
+            border-bottom: 1px solid #CCC;
             .drawer-title {
                 flex: 1;
                 font-size: 24px;
@@ -23,6 +26,10 @@
                 font-size: 24px;
                 cursor: pointer;
             }
+        }
+
+        .drawer-body {
+            height: 100%;
         }
     }
     
