@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { CartContext } from '../../context/cartContext';
 import { getStorageCart, getCartItemIndex, getCartCount, setStorageCart } from '../../utils/localStorage';
 import './productCardStyles.scss';
 
@@ -6,6 +7,7 @@ const ProductCard = (props) => {
     const {item} = props
 
     const [cartCount, setCartCount] = useState(getCartCount(item))
+    const {updateCart} = useContext(CartContext)
 
     const addToCart = (item) => {
         const cartData = getStorageCart()
@@ -21,6 +23,7 @@ const ProductCard = (props) => {
         setCartCount(cartCount + 1)
         cartData.total += item.price
 
+        updateCart(cartData)
         setStorageCart(cartData)
 
     }
@@ -50,6 +53,7 @@ const ProductCard = (props) => {
             
         } 
 
+        updateCart(cartData)
         setStorageCart(cartData)
 
     }
