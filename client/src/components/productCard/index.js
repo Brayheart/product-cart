@@ -21,6 +21,7 @@ const ProductCard = (props) => {
         }
 
         setCartCount(cartCount + 1)
+        cartData.totalQty += 1
         cartData.total += item.price
 
         updateCart(cartData)
@@ -39,6 +40,7 @@ const ProductCard = (props) => {
             if (cartQuanity > 0) {
                 cartData.cart[cartItemIndex].quantity -= 1
                 cartData.total -= item.price;
+                cartData.totalQty -= 1
                 setCartCount(cartCount - 1);
 
                 if (cartData.cart[cartItemIndex].quantity === 0) {
@@ -46,6 +48,7 @@ const ProductCard = (props) => {
                 }
 
                 if (cartData.cart.length === 0) {
+                    cartData.totalQty = 0
                     cartData.total = 0;
                 }
 

@@ -36,11 +36,11 @@ const CartDrawer = (props) => {
 
     const [open, setOpen] = useState(false)
 
-    const {cart, total} = useContext(CartContext)
+    const {cart, total, totalQty} = useContext(CartContext)
 
     return (
         <React.Fragment>
-            <span className='cart-drawer-span' onClick={()=> setOpen(!open)}>Cart</span>
+            <button className='cart-drawer-btn' onClick={() => setOpen(!open)}>Cart {totalQty > 0 && `(${totalQty})`}</button>
             <Drawer
                 id={'cart-drawer'}
                 open={open}

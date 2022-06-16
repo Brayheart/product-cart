@@ -13,8 +13,15 @@ $cart-drawer-padding: 0 12px;
     }
 }
 
-.cart-drawer-span {
+.cart-drawer-btn {
+    background-color: #ff4e0e;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: #FFF;
     cursor: pointer;
+    font-weight: bold;
+    width: 100px;
+    height: 36px;
 }
 
 .cart-drawer-ul {
