@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { CartContext } from '../../../context/cartContext';
 import { getStorageCart } from '../../../utils/localStorage';
 import Drawer from '../index';
 import './cartDrawerStyles.scss';
@@ -34,25 +35,34 @@ const CartItemCard = (prop) => {
 const CartDrawer = (props) => {
 
     const [open, setOpen] = useState(false)
-    
-    const {cart, total} = getStorageCart()
+
+    const {cart, total} = useContext(CartContext)
 
     return (
         <React.Fragment>
             <span className='cart-drawer-span' onClick={()=> setOpen(!open)}>Cart</span>
             <Drawer
-                id={"cart-drawer"}
+                id={'cart-drawer'}
                 open={open}
                 onClose={() => setOpen(false)}
                 title={'Cart'}>
                 <section className="cart-drawer-section">
                     <div className="cart-drawer-section-inner">
-                        <ul className='cart-drawer-ul'>
-                            {cart.map(item => <CartItemCard item={item} />)}
-                        </ul>
-                        <div className="cart-drawer-product-total">
-                            total: ${total.toFixed(2)}
-                        </div>
+                        {
+                            cart.length > 0 ?
+                                <React.Fragment>
+                                    <ul className='cart-drawer-ul'>
+                                        {cart.map(item => <CartItemCard key={item.name} item={item} />)}
+                                    </ul>
+                                    <div className="cart-drawer-product-total">
+                                        total: ${total.toFixed(2)}
+                                    </div>
+                                </React.Fragment>
+                                :
+                                <div className='cart-drawer-is-empty'>
+                                    There are currently no items in the cart
+                                </div>
+                        }
                     </div>
                 </section>
             </Drawer>
