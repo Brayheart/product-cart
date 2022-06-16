@@ -1,4 +1,5 @@
 import React from 'react';
+import CartDrawer from '../../components/drawer/cartDrawer';
 import './navbarStyles.scss'
 
 const NavBar = () => {
@@ -8,7 +9,7 @@ const NavBar = () => {
                 <div className="navbar-links">
                     <span className="navbar-title">Rugs USA</span>
                 </div>
-                <div><span className="navbar-cart">Cart</span></div>
+                <div className="navbar-cart"><CartDrawer /></div>
             </div>
         </div>
     )
