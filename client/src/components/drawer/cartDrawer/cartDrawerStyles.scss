@@ -52,6 +52,9 @@ $cart-drawer-padding: 0 12px;
                 font-size: 14px;
                 padding: 8px 0;
                 overflow: hidden;
+                .cart-li-product-quantity {
+                    font-weight: 100;
+                }
             }
             
         }    

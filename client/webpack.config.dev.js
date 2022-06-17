@@ -24,7 +24,7 @@ module.exports = {
     resolve: {
         extensions: ['*', '.js', '.jsx'],
     },
-    plugins: [new HtmlWebpackPlugin({template: 'public/index.html', inject: 'body'})],
+    plugins: [new HtmlWebpackPlugin({title: 'Rugs USA', template: 'public/index.html', inject: 'body'})],
     output: {
         path: path.resolve(__dirname, './build'),
         filename: 'bundle.js',

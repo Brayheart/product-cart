@@ -6,14 +6,16 @@ import './layoutStyles.scss';
 const Layout = () => {
     return (
         <React.Fragment>
-            <NavBar />
-            <div className="layoutContainer">
+            <header>
+                <NavBar />
+            </header>
+            <main className="layoutContainer">
                 <div className="layoutBody">
                     <div className='layoutInner'>
                         <ProductGrid />
                     </div>
                 </div>
-            </div>
+            </main>
         </React.Fragment>
     )
 }
