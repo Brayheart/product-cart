@@ -1,9 +1,11 @@
+@import '../../theme.scss';
+
 $navbar-title-fontSize: 24px;
 $navbar-cart-fontSize: 18px;
 
 .navbar-container {
     width: 100%;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid $theme-border-color;
     height: 79px;
     position: fixed;
     top: 0;

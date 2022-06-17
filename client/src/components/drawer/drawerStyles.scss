@@ -1,3 +1,4 @@
+@import '../../theme.scss';
 @import "../../media-queries.scss";
 
 .drawer-container {
@@ -6,7 +7,7 @@
     right: -300px;
     height: 100%;
     background-color: #FFF;
-    border-left: 1px solid #CCC;
+    border-left: 1px solid $theme-border-color;
     height: 100vh;
     transition: width 300ms, right 350ms ease-in;
     width: 0px;
@@ -14,7 +15,7 @@
         height: 100%;
         .drawer-header {
             display:flex;
-            border-bottom: 1px solid #CCC;
+            border-bottom: 1px solid $theme-border-color;
             position: absolute;
             width: 100%;
             z-index: 1;

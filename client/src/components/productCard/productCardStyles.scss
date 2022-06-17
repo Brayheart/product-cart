@@ -1,3 +1,4 @@
+@import '../../theme.scss';
 @import '../../media-queries.scss';
 
 $border-color: #DDD;
@@ -45,12 +46,12 @@ $border-color: #DDD;
     .product-card-details-name {
         text-align: center;
         margin-bottom: 4px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
         h3 {
             margin: 0;
             font-size: 14px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
     }
     .product-card-details-collection {
@@ -84,10 +85,10 @@ $border-color: #DDD;
     }
 
     .btn-add {
-        background-color: forestgreen;
+        background-color: $theme-add-btn-color;
     }
     .btn-remove {
-        background-color: red;
+        background-color: $theme-remove-btn-color;
     }
 }
 
