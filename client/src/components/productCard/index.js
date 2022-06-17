@@ -71,7 +71,7 @@ const ProductCard = (props) => {
                 </div>
                 <div className="product-card-details">
                     <div className="product-card-details-name">
-                        {item.productName}
+                        <h3>{item.productName}</h3>
                     </div>
                     <div className="product-card-details-collection">
                         {item.collection} Collection
