@@ -12,6 +12,9 @@ const CartItemCard = (prop) => {
             <div className="cart-li-inner">
                 <div className="cart-li-img">
                     <img src={item.imgUrl} alt={item.name} />
+                    <div className="cart-li-product-quantity">
+                        Qty: {item.quantity}
+                    </div>
                 </div>
                 <div className="cart-li-product-details">
                     <div>
@@ -21,9 +24,6 @@ const CartItemCard = (prop) => {
                         <div className="cart-li-product-collection">
                             {item.collection} Collection
                         </div>
-                    </div>
-                    <div className="cart-li-product-quantity">
-                        Qty: {item.quantity}
                     </div>
                 </div>
             </div>
