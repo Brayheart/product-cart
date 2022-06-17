@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const products = require('../server/data/product-list.json');
+const products = require('../server/product-list.json');
 
 
 fs.writeFile('../server/products.json', JSON.stringify(products.cart, null, 2), (err) => {
