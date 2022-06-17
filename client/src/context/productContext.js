@@ -7,7 +7,7 @@ export const ProductContext = React.createContext({
 
 export const ProductContextProvider = (props) => {
 
-    const [state, setState] = useState([])
+    const [state, setState] = useState(null)
 
     useEffect(() => {
         const fetchAllProducts = async () => {
@@ -15,7 +15,7 @@ export const ProductContextProvider = (props) => {
                 let products = await fetch('http://localhost:8080/api/products/all').then((response) => response.json())
                 setState(products)
             } catch (error) {
-                // handle error
+                setState([])
             }
         }
 
