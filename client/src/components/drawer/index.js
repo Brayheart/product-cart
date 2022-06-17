@@ -11,7 +11,7 @@ const Drawer = (props) => {
                 <div className="drawer-header">
                     <div className="drawer-header-inner">
                         <h2 className="drawer-title">{title}</h2>
-                        <div className="drawer-close" onClick={onClose}>X</div>
+                        <button className="drawer-close" onClick={onClose} aria-label="Close">X</button>
                     </div>
                 </div>
                 <div className="drawer-body">

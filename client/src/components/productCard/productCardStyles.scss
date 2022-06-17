@@ -48,6 +48,10 @@ $border-color: #DDD;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
+        h3 {
+            margin: 0;
+            font-size: 14px;
+        }
     }
     .product-card-details-collection {
         text-align:center;
