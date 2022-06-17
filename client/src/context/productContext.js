@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
+let url = '/api/products/all'
+
+if (process.env.NODE_ENV === 'development') {
+    url = 'http://localhost:8080/api/products/all'
+}
 
 export const ProductContext = React.createContext({
     product: [],
@@ -12,7 +17,7 @@ export const ProductContextProvider = (props) => {
     useEffect(() => {
         const fetchAllProducts = async () => {
             try {
-                let products = await fetch('http://localhost:8080/api/products/all').then((response) => response.json())
+                let products = await fetch(url).then((response) => response.json())
                 setState(products)
             } catch (error) {
                 setState([])
