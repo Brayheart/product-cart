@@ -9,8 +9,10 @@ const Drawer = (props) => {
         <div id={id} className={`drawer-container ${open ? 'drawer-open': 'drawer-close'}`}>
             <div className={`drawer-inner ${open ? 'drawer-display' : 'drawer-hidden'}`}>
                 <div className="drawer-header">
-                    <h2 className="drawer-title">{title}</h2>
-                    <div className="drawer-close" onClick={onClose}>X</div>
+                    <div className="drawer-header-inner">
+                        <h2 className="drawer-title">{title}</h2>
+                        <div className="drawer-close" onClick={onClose}>X</div>
+                    </div>
                 </div>
                 <div className="drawer-body">
                     {children}
