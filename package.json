@@ -1,0 +1,23 @@
+{
+  "name": "rugs-usa-product-cart",
+  "version": "1.0.0",
+  "description": "Root package to automate build tasks for deployment",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "build": "cd ./client && npm i && cd ../server && npm i",
+    "build-deploy": " cd ./scripts && node parseProducts && cd ../client && npm run build && cp -R build ../server/app",
+    "clean-up": "rm -rf server/app && rm server/products.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hex28/product-cart.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hex28/product-cart/issues"
+  },
+  "homepage": "https://github.com/hex28/product-cart#readme"
+}

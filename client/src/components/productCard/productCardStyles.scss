@@ -1,0 +1,94 @@
+@import '../../theme.scss';
+@import '../../media-queries.scss';
+
+$border-color: #DDD;
+
+.product-card-container {
+    height: 450px;
+    width: 100%;
+    @include breakpoint-sm {
+        width: 336px;
+    }
+}
+
+.product-card-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #DDD;
+    border-radius: 3px;
+}
+
+.product-card-image-container {
+    flex: 1;
+    width:100%;
+    border-bottom: 1px solid $border-color;
+    min-height: 259px;
+    .product-card-image-inner {
+        background-color: #f5f7fa;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        img {
+            max-height: 314px;
+            height:100%;
+        }
+    }
+}
+
+.product-card-details {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    .product-card-details-name {
+        text-align: center;
+        margin-bottom: 4px;
+        h3 {
+            margin: 0;
+            font-size: 14px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+    .product-card-details-collection {
+        text-align:center;
+        margin-bottom: 4px;
+    }
+    .product-card-details-price {
+        text-align: center;
+        margin-bottom: 4px;
+        font-weight: 100;
+    }
+    .product-card-details-cart-count {
+        text-align: center;
+        margin-bottom: 4px;
+        font-weight: 100;
+    }
+
+    .product-card-details-btns {
+        display: flex;
+        justify-content: center;
+        .product-card-detail-btn {
+            margin-right:4px;
+            border-radius: 3px;
+            border: 1px solid transparent;
+            height: 36px;
+            width: 100px;
+            font-weight: bold;
+            color: #FFF;
+            cursor: pointer;
+        }
+    }
+
+    .btn-add {
+        background-color: $theme-add-btn-color;
+    }
+    .btn-remove {
+        background-color: $theme-remove-btn-color;
+    }
+}
+

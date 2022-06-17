@@ -1,0 +1,16 @@
+{
+  "name": "rugs-usa-express-server",
+  "version": "1.0.0",
+  "description": "An express server to serve product data",
+  "main": "server.js",
+  "scripts": {
+    "start": "cd ../client && npm run build && cd ../server && node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andy Huynh",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  }
+}
