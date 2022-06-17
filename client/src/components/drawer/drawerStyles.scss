@@ -6,13 +6,12 @@
     right: -300px;
     height: 100%;
     background-color: #FFF;
-    min-width: 0px;
     border-left: 1px solid #CCC;
     height: 100vh;
-    transition: min-width 300ms, right 350ms ease-in;
+    transition: width 300ms, right 350ms ease-in;
+    width: 0px;
     .drawer-inner {
         height: 100%;
-        
         .drawer-header {
             display:flex;
             padding: 0 12px;
@@ -38,16 +37,12 @@
 }
 
 .drawer-open {
-    min-width: 100%;
+    width: 100%;
     right: 0px;
 
     @include breakpoint-sm {
-        min-width: 300px;
+        width: 420px;
     }
-}
-
-.drawer-close {
-    min-width: 0px;
 }
 
 .drawer-display {

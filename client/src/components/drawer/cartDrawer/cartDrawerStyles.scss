@@ -45,9 +45,17 @@ $cart-drawer-padding: 0 12px;
                 justify-content: space-between;
                 font-size: 14px;
                 padding: 8px 0;
+                overflow: hidden;
             }
+            
         }    
     }
+}
+
+.cart-li-product-name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .cart-drawer-product-total {
