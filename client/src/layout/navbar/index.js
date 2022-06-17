@@ -4,14 +4,14 @@ import './navbarStyles.scss'
 
 const NavBar = () => {
     return (
-        <div className="navbar-container">
+        <nav className="navbar-container">
             <div className="navbar-inner">
                 <div className="navbar-links">
-                    <span className="navbar-title">Rugs USA</span>
+                    <h1 className="navbar-title">RUGS USA</h1>
                 </div>
                 <div className="navbar-cart"><CartDrawer /></div>
             </div>
-        </div>
+        </nav>
     )
 }
 

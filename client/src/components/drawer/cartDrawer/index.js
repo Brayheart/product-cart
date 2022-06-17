@@ -11,7 +11,7 @@ const CartItemCard = (prop) => {
         <li>
             <div className="cart-li-inner">
                 <div className="cart-li-img">
-                    <img src={item.imgUrl} />
+                    <img src={item.imgUrl} alt={item.name} />
                 </div>
                 <div className="cart-li-product-details">
                     <div>

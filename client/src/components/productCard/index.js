@@ -62,11 +62,11 @@ const ProductCard = (props) => {
     }
 
     return (
-        <div className="product-card-container" data-cart-index="0">
+        <article className="product-card-container" data-cart-index="0">
             <div className="product-card-inner">
                 <div className="product-card-image-container">
                     <div className="product-card-image-inner">
-                        <img src={item.imgUrl.split('?')[0]} />
+                        <img src={item.imgUrl.split('?')[0]} alt={item.name} />
                     </div>
                 </div>
                 <div className="product-card-details">
@@ -88,7 +88,7 @@ const ProductCard = (props) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
     )
 }
 
