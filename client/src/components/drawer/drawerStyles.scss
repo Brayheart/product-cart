@@ -14,18 +14,28 @@
         height: 100%;
         .drawer-header {
             display:flex;
-            padding: 0 12px;
             border-bottom: 1px solid #CCC;
-            .drawer-title {
-                flex: 1;
-                font-size: 24px;
-            }
-    
-            .drawer-close {
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+            background-color: #FFF;
+
+            .drawer-header-inner {
                 display: flex;
-                align-items: center;
-                font-size: 24px;
-                cursor: pointer;
+                padding: 0 12px;
+                width: 100%;
+
+                .drawer-title {
+                    flex: 1;
+                    font-size: 24px;
+                }
+        
+                .drawer-close {
+                    display: flex;
+                    align-items: center;
+                    font-size: 24px;
+                    cursor: pointer;
+                }
             }
         }
 
