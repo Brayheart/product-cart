@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import ProductCard from '../productCard';
 import { ProductContext } from '../../context/productContext';
-import './productGridStyles.scss'
 
 const ProductGrid = () => {
 

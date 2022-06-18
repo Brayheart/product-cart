@@ -1,8 +1,8 @@
 import React from 'react';
-import './style.scss';
+import './main.scss';
 import { CartContextProvider } from './context/cartContext';
-import Layout from './layout';
 import { ProductContextProvider } from './context/productContext';
+import Layout from './layout';
 
 const App = () => {
 

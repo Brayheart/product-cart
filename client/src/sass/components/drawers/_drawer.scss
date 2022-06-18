@@ -1,5 +1,4 @@
-@import '../../theme.scss';
-@import "../../media-queries.scss";
+$drawer-width: 420px;
 
 .drawer-container {
     position: absolute;
@@ -54,7 +53,7 @@
     right: 0px;
 
     @include breakpoint-sm {
-        width: 420px;
+        width: $drawer-width;
     }
 }
 
@@ -64,8 +63,4 @@
 
 .drawer-hidden {
     display: none;
-}
-
-.drawer-span {
-    cursor: pointer;
 }

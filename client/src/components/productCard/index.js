@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { CartContext } from '../../context/cartContext';
 import { getStorageCart, getCartItemIndex, getCartCount, setStorageCart } from '../../utils/localStorage';
-import './productCardStyles.scss';
 
 const ProductCard = (props) => {
     const {item} = props

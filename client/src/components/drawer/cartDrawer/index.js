@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react'
 import { CartContext } from '../../../context/cartContext';
 import { getStorageCart } from '../../../utils/localStorage';
 import Drawer from '../index';
-import './cartDrawerStyles.scss';
 
 const CartItemCard = (prop) => {
     const { item } = prop;
