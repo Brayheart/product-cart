@@ -1,6 +1,5 @@
 import React from 'react';
 import CartDrawer from '../../components/drawer/cartDrawer';
-import './navbarStyles.scss'
 
 const NavBar = () => {
     return (

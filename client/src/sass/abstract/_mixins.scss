@@ -1,0 +1,41 @@
+@mixin breakpoint-xs {
+    @media (min-width: 475px) { @content; }
+}
+
+@mixin breakpoint-sm {
+    @media (min-width: 576px) { @content; }
+}
+
+@mixin breakpoint-md {
+    @media (min-width: 768px) { @content; }
+}
+
+@mixin breakpoint-lg {
+    @media (min-width: 1024px) { @content; }
+}
+
+@mixin breakpoint-xl {
+    @media (min-width: 1280px) { @content; }
+}
+
+@mixin button {
+    border-radius: 3px;
+    border: 1px solid transparent;
+    color: #FFF;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100px;
+    height: 36px;
+}
+
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin text-ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
