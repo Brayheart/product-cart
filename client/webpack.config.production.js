@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+require('dotenv').config()
 
 module.exports = {
     entry: path.resolve(__dirname, './src/index.js'),
@@ -21,7 +22,7 @@ module.exports = {
     resolve: {
         extensions: ['*', '.js', '.jsx'],
     },
-    plugins: [new MiniCssExtractPlugin(), new HtmlWebpackPlugin({title: 'Rugs USA', template: 'public/index.html', inject: 'body'})],
+    plugins: [new MiniCssExtractPlugin(), new HtmlWebpackPlugin({title: process.env.SITE_TITLE, template: 'public/index.html', inject: 'body'})],
     output: {
         path: path.resolve(__dirname, './build'),
         filename: 'bundle.js',
