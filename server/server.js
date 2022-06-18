@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, './app')))
 
 app.use('/api', routes);
 
-app.get('*', (req, res) => res.sendFile(path.join(__dirname, './app/ndex.html')))
+app.get('*', (req, res) => res.sendFile(path.join(__dirname, './app/index.html')))
 
 app.listen(port, () => {
     console.log(`Server app started on port ${port}`);
