@@ -3,6 +3,7 @@ $layout-max-width: 1400px;
 .layoutContainer {
     height: 100%;
     width: 100%;
+    background-color: $theme-layout-background-color;
 }
 
 .layoutBody {
