@@ -4,6 +4,8 @@ $border-color: #DDD;
     height: 450px;
     width: 100%;
     background-color: #FFF;
+    @include card-border;
+    
     @include breakpoint-sm {
         width: 336px;
     }
@@ -13,8 +15,6 @@ $border-color: #DDD;
     display: flex;
     flex-direction: column;
     height: 100%;
-    border: 1px solid #DDD;
-    border-radius: 3px;
 }
 
 .product-card-image-container {
