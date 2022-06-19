@@ -1,64 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { CartContext } from '../../context/cartContext';
-import { getStorageCart, getCartItemIndex, getCartCount, setStorageCart } from '../../utils/localStorage';
 
 const ProductCard = (props) => {
     const {item} = props
 
-    const [cartCount, setCartCount] = useState(getCartCount(item))
-    const {updateCart} = useContext(CartContext)
-
-    const addToCart = (item) => {
-        const cartData = getStorageCart()
-        
-        const cartItemIndex = getCartItemIndex(cartData, item)
-
-        if (cartItemIndex !== -1) {
-            cartData.cart[cartItemIndex].quantity += 1
-        } else {
-            cartData.cart.push(item);
-        }
-
-        setCartCount(cartCount + 1)
-        cartData.totalQty += 1
-        cartData.total += item.price
-
-        updateCart(cartData)
-        setStorageCart(cartData)
-
-    }
-
-    const removeFromCart = (item) => {
-        const cartData = getStorageCart()
-        
-        const cartItemIndex = getCartItemIndex(cartData, item)
-
-        if (cartItemIndex !== -1) {
-            let cartQuanity = cartData.cart[cartItemIndex].quantity
-
-            if (cartQuanity > 0) {
-                cartData.cart[cartItemIndex].quantity -= 1
-                cartData.total -= item.price;
-                cartData.totalQty -= 1
-                setCartCount(cartCount - 1);
-
-                if (cartData.cart[cartItemIndex].quantity === 0) {
-                    cartData.cart.splice(cartItemIndex, 1)
-                }
-
-                if (cartData.cart.length === 0) {
-                    cartData.totalQty = 0
-                    cartData.total = 0;
-                }
-
-            }
-            
-        } 
-
-        updateCart(cartData)
-        setStorageCart(cartData)
-
-    }
+    const {addCartItem, removeCartItem, getCartItemCount} = useContext(CartContext)
 
     return (
         <article className="product-card-container" data-cart-index="0">
@@ -79,11 +25,11 @@ const ProductCard = (props) => {
                         ${Number(item.price).toFixed(2)}
                     </div>
                     <div className="product-card-details-cart-count">
-                        Cart Count: {getCartCount(item)}
+                        Cart Count: {getCartItemCount(item)}
                     </div>
                     <div className="product-card-details-btns">
-                        <button className="product-card-detail-btn btn-add" onClick={()=>addToCart(item)}>Add</button>
-                        <button className="product-card-detail-btn btn-remove" onClick={()=>removeFromCart(item)}>Remove</button>
+                        <button className="product-card-detail-btn btn-add" onClick={()=>addCartItem(item)}>Add</button>
+                        <button className="product-card-detail-btn btn-remove" onClick={()=>removeCartItem(item)}>Remove</button>
                     </div>
                 </div>
             </div>

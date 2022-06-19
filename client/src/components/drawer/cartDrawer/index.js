@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react'
 import { CartContext } from '../../../context/cartContext';
-import { getStorageCart } from '../../../utils/localStorage';
 import Drawer from '../index';
 
 const CartItemCard = (prop) => {
@@ -12,7 +11,7 @@ const CartItemCard = (prop) => {
                 <div className="cart-li-img">
                     <img src={item.imgUrl} alt={item.name} />
                     <div className="cart-li-product-quantity">
-                        Qty: {item.quantity}
+                        Qty: {item.cartCount}
                     </div>
                 </div>
                 <div className="cart-li-product-details">
