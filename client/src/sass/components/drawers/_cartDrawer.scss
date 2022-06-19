@@ -11,6 +11,7 @@ $cart-drawer-padding: 0 12px;
         padding: 12px 0;
         position: relative;
         top: 80px;
+        @include box-shadow-bottom;
     }
 }
 
@@ -21,7 +22,6 @@ $cart-drawer-padding: 0 12px;
 
 .cart-drawer-ul {
     @include reset-list;
-    
     li {
         padding: $cart-drawer-padding;
         .cart-li-inner {

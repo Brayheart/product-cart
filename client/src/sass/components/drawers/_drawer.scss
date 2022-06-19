@@ -14,12 +14,11 @@ $drawer-width: 420px;
         height: 100%;
         .drawer-header {
             display:flex;
-            border-bottom: 1px solid $theme-border-color;
             position: absolute;
             width: 100%;
             z-index: 1;
             background-color: #FFF;
-
+            @include box-shadow-bottom;
             .drawer-header-inner {
                 display: flex;
                 padding: 0 12px;
@@ -29,7 +28,6 @@ $drawer-width: 420px;
                     flex: 1;
                     font-size: 24px;
                 }
-        
                 .drawer-close {
                     display: flex;
                     align-items: center;
