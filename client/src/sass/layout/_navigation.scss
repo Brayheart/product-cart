@@ -5,12 +5,12 @@ $navbar-cart-fontSize: 18px;
 
 .navbar-container {
     width: 100%;
-    border-bottom: 1px solid $theme-border-color;
     height: 79px;
     position: fixed;
     top: 0;
     left: 0;
     background-color: #FFF;
+    @include box-shadow-bottom;
 }
 
 .navbar-inner {
