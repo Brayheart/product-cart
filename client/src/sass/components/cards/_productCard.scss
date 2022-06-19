@@ -4,11 +4,8 @@ $border-color: #DDD;
     height: 450px;
     width: 100%;
     background-color: #FFF;
+    margin: auto;
     @include card-border;
-    
-    @include breakpoint-sm {
-        width: 336px;
-    }
 }
 
 .product-card-inner {
