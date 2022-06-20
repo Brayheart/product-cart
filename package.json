@@ -9,7 +9,7 @@
     "build-deploy": "cd ./client && npm run build && cp -R build ../server/app",
     "clean-up": "rm -rf server/app",
     "script-products": "cd ./scripts && node parseProducts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cd ./client && npm test"
   },
   "repository": {
     "type": "git",

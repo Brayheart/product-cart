@@ -55,7 +55,7 @@ const CartDrawer = (props) => {
                             cart.length > 0 ?
                                 <React.Fragment>
                                     <ul className='cart-drawer-ul'>
-                                        {cart.map(item => <CartItemCard key={item.productName} item={item} />)}
+                                        {cart.map(item => <CartItemCard key={item.product} item={item} />)}
                                     </ul>
                                     <div className="cart-drawer-product-total">
                                         total: ${total.toFixed(2)}

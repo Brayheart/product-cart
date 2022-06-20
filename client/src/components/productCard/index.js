@@ -11,7 +11,7 @@ const ProductCard = (props) => {
             <div className="product-card-inner">
                 <div className="product-card-image-container">
                     <div className="product-card-image-inner">
-                        <img src={item.imgUrl.split('?')[0]} alt={item.name} />
+                        <img src={item.imgUrl.split('?')[0]} alt={item.productName} />
                     </div>
                 </div>
                 <div className="product-card-details">
