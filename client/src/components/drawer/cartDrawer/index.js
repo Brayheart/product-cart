@@ -19,9 +19,12 @@ const CartItemCard = (prop) => {
                         <div className="cart-li-product-name">
                             {item.productName}
                         </div>
-                        <div className="cart-li-product-collection">
-                            {item.collection} Collection
-                        </div>
+                        {
+                            item.collection &&
+                            <div className="cart-li-product-collection">
+                                {item.collection} Collection
+                            </div>
+                        }
                     </div>
                 </div>
             </div>
