@@ -18,9 +18,12 @@ const ProductCard = (props) => {
                     <div className="product-card-details-name">
                         <h3>{item.productName}</h3>
                     </div>
-                    <div className="product-card-details-collection">
-                        {item.collection} Collection
-                    </div>
+                    {
+                        item.collection &&
+                        <div className="product-card-details-collection">
+                            {item.collection} Collection
+                        </div>
+                    }
                     <div className="product-card-details-price">
                         ${Number(item.price).toFixed(2)}
                     </div>
