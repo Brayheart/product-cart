@@ -1,5 +1,4 @@
 import React from 'react';
-import './drawerStyles.scss';
 
 const Drawer = (props) => {
 

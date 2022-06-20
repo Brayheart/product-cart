@@ -3,11 +3,12 @@ $layout-max-width: 1400px;
 .layoutContainer {
     height: 100%;
     width: 100%;
+    background-color: $theme-layout-background-color;
+    max-width: $layout-max-width;
+    margin:auto;
 }
 
 .layoutBody {
-    max-width: $layout-max-width;
-    margin: auto auto;
     padding: 18px;
 }
 

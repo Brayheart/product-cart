@@ -1,7 +1,6 @@
 import React from 'react';
 import NavBar from './navbar';
 import ProductGrid from '../components/productGrid';
-import './layoutStyles.scss';
 
 const Layout = () => {
     return (

@@ -1,5 +1,4 @@
-@import '../../theme.scss';
-@import "../../media-queries.scss";
+$drawer-width: 420px;
 
 .drawer-container {
     position: absolute;
@@ -15,12 +14,11 @@
         height: 100%;
         .drawer-header {
             display:flex;
-            border-bottom: 1px solid $theme-border-color;
             position: absolute;
             width: 100%;
             z-index: 1;
             background-color: #FFF;
-
+            @include box-shadow-bottom;
             .drawer-header-inner {
                 display: flex;
                 padding: 0 12px;
@@ -30,7 +28,6 @@
                     flex: 1;
                     font-size: 24px;
                 }
-        
                 .drawer-close {
                     display: flex;
                     align-items: center;
@@ -54,7 +51,7 @@
     right: 0px;
 
     @include breakpoint-sm {
-        width: 420px;
+        width: $drawer-width;
     }
 }
 
@@ -64,8 +61,4 @@
 
 .drawer-hidden {
     display: none;
-}
-
-.drawer-span {
-    cursor: pointer;
 }

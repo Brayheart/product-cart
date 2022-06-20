@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+require('dotenv').config()
 
 module.exports = {
     entry: path.resolve(__dirname, './src/index.js'),
@@ -24,7 +25,7 @@ module.exports = {
     resolve: {
         extensions: ['*', '.js', '.jsx'],
     },
-    plugins: [new HtmlWebpackPlugin({title: 'Rugs USA', template: 'public/index.html', inject: 'body'})],
+    plugins: [new HtmlWebpackPlugin({title: process.env.SITE_TITLE, template: 'public/index.html', inject: 'body'})],
     output: {
         path: path.resolve(__dirname, './build'),
         filename: 'bundle.js',

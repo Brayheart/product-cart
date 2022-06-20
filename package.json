@@ -4,11 +4,12 @@
   "description": "Root package to automate build tasks for deployment",
   "main": "index.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "NODE_ENV=production node server/server.js",
     "build": "cd ./client && npm i && cd ../server && npm i",
-    "build-deploy": " cd ./scripts && node parseProducts && cd ../client && npm run build && cp -R build ../server/app",
-    "clean-up": "rm -rf server/app && rm server/products.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-deploy": "cd ./client && npm run build && cp -R build ../server/app",
+    "clean-up": "rm -rf server/app",
+    "script-products": "cd ./scripts && node parseProducts",
+    "test": "cd ./client && npm test"
   },
   "repository": {
     "type": "git",
