@@ -6,9 +6,8 @@
   "scripts": {
     "start": "NODE_ENV=production node server/server.js",
     "build": "cd ./client && npm i && cd ../server && npm i",
-    "build-deploy": "npm run script-products && npm run build-webpack",
-    "build-webpack": "cd ./client && npm run build && cp -R build ../server/app",
-    "clean-up": "rm -rf server/app && rm server/products.json",
+    "build-deploy": "cd ./client && npm run build && cp -R build ../server/app",
+    "clean-up": "rm -rf server/app",
     "script-products": "cd ./scripts && node parseProducts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
