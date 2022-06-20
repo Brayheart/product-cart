@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`displays a grid of products 1`] = `
+<section
+  className="product-grid-container"
+>
+  <article
+    className="product-card-container"
+    data-cart-index="0"
+  >
+    <div
+      className="product-card-inner"
+    >
+      <div
+        className="product-card-image-container"
+      >
+        <div
+          className="product-card-image-inner"
+        >
+          <img
+            src="https://www.mobygames.com/images/covers/l/153013-pokemon-red-version-game-boy-front-cover.jpg"
+          />
+        </div>
+      </div>
+      <div
+        className="product-card-details"
+      >
+        <div
+          className="product-card-details-name"
+        >
+          <h3>
+            Pokemon Red
+          </h3>
+        </div>
+        <div
+          className="product-card-details-price"
+        >
+          $
+          51.50
+        </div>
+        <div
+          className="product-card-details-cart-count"
+        >
+          Cart Count: 
+          0
+        </div>
+        <div
+          className="product-card-details-btns"
+        >
+          <button
+            className="product-card-detail-btn btn-add"
+            onClick={[Function]}
+          >
+            Add
+          </button>
+          <button
+            className="product-card-detail-btn btn-remove"
+            onClick={[Function]}
+          >
+            Remove
+          </button>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+`;
