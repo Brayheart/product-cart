@@ -18,6 +18,7 @@ exports[`displays a grid of products 1`] = `
           className="product-card-image-inner"
         >
           <img
+            alt="Pokemon Red"
             src="https://www.mobygames.com/images/covers/l/153013-pokemon-red-version-game-boy-front-cover.jpg"
           />
         </div>
